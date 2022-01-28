@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="list"></ul>
+    <script>
+      const arr = [
+        { name: 'ming', age: 12, sex: '男 ' },
+        { name: 'hong', age: 11, sex: '女 ' },
+        { name: 'qiang', age: 13, sex: '男 ' },
+      ];
+      const list = document.getElementById('list');
+      //遍历arr数组，没遍历一项，就以字符串的视角将HTML字符串添加到list中
+      for (let i = 0; i < arr.length; i++) {
+        list.innerHTML += [
+          '<div class="hd">' + arr[i].name + '</div>',
+          '<div class="bd">',
+          '  <p>姓名:' + arr[i].name + '</p>',
+          '  <p>年龄:' + arr[i].age + '</p>',
+          '  <p>性别:' + arr[i].sex + ' </p>',
+          '</div>',
+        ].join('');
+      }
+    </script>
+  </body>
+</html>
